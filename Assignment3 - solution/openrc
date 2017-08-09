@@ -1,0 +1,6 @@
+#!/bin/bash 
+export OS_USERNAME=cc17-group45
+export OS_PASSWORD=EbLlxp2BtV
+export OS_TENANT_NAME=cc17-group45
+export OS_AUTH_URL=http://cloud.cit.tu-berlin.de:5000/v2.0
+

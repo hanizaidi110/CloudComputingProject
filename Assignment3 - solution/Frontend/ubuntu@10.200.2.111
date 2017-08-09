@@ -1,0 +1,18 @@
+version: "3"
+services:
+  web:
+    # replace username/repo:tag with your name and image details
+    image: talalmts/dock-f:frontend
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.hostname == stackgrp45-frontend
+    environment:
+      - CC_BACKEND_SERVERS=${CC_BACKEND_SERVERS}
+    ports:
+      - "80:80"
+    volumes:
+      - /etc:/hypervisor_etc
